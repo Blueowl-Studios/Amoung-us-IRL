@@ -1,34 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Alert System</title>
+    
+    <!-- iOS / Mobile Web App capability -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pi Alerts">
+</head>
+<body>
 
-        <link rel="preconnect" href="https://googleapis.com">
-        <link rel="preconnect" href="https://gstatic.com" crossorigin>
-        <link href="https://googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <h1>Raspberry Pi Alert Monitor</h1>
+    <button id="notify-btn">Enable Mobile & Desktop Notifications</button>
+    <p id="status-text">Status: Checking setup...</p>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Among Us IRL!</title>
-        <style>
-            body {
-                background-image: url('images.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-
-                color: white;
-                font-family: 'Ubuntu', sans-serif;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>My Notification Site</h1>
-        <button id="enable-btn">Enable Desktop Notifications</button>
-        <p id="status">Status: Waiting for connection...</p>
-
-        <!-- Link your external JavaScript file -->
-        <script src="script.js"></script>
-    </body>
-
+    <script src="script.js"></script>
+</body>
 </html>
