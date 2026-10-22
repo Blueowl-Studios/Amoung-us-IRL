@@ -3,18 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pi Alert System</title>
+    <title>Among Us IRL Dashboard</title>
     
-    <!-- iOS / Mobile Web App capability -->
+    <!-- Mobile Web App Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Pi Alerts">
+    <meta name="apple-mobile-web-app-title" content="Among Us IRL">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: #1e293b;
+            width: 100%;
+            max-width: 500px;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        .status {
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background: #334155;
+        }
+
+        .status.connected { color: #4ade80; }
+        .status.disconnected { color: #f87171; }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #0284c7;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover { background: #0369a1; }
+
+        h2 {
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        li {
+            background: #0f172a;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            border-left: 4px solid #38bdf8;
+        }
+
+        li span {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Raspberry Pi Alert Monitor</h1>
-    <button id="notify-btn">Enable Mobile & Desktop Notifications</button>
-    <p id="status-text">Status: Checking setup...</p>
+    <div class="container">
+        <h1>Among Us IRL Dashboard</h1>
+        <div id="status-text" class="status">Connecting to stream...</div>
+
+        <button id="notify-btn">Enable Desktop & Mobile Notifications</button>
+
+        <h2>Live Activity Feed</h2>
+        <ul id="log-list">
+            <!-- New notifications will be dynamically inserted here -->
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
