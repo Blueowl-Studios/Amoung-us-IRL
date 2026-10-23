@@ -1,0 +1,22 @@
+{
+  "name": "Among Us IRL Dashboard",
+  "short_name": "AmongUsIRL",
+  "start_url": "/Amoung-us-IRL/",
+  "scope": "/Amoung-us-IRL/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#ff0000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://ntfy.sh",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://ntfy.sh",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
