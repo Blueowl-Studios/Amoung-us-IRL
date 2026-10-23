@@ -52,7 +52,7 @@ eventSource.onmessage = async (event) => {
                 body: data.message,
                 icon: "https://ntfy.sh/static/images/badge.png",
                 badge: "https://ntfy.sh/static/images/badge.png",
-                vibrate: ,
+                vibrate: [200, 100, 200, 900, 200], // Vibration pattern
                 data: { url: SITE_URL } // Pass URL data to the service worker click handler
             });
         }
